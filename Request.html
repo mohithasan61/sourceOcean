@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Source Ocean - Explore</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="responsive.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="name">
+                        <a href="index.html">
+                            <h1>
+                                <span style="color: orange;">source</span>
+                                <span style="color: green;">Ocean <span>
+                            </h1>
+                        </a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="explore.html">Explore</a>
+                        </li>
+                        <li>
+                            <a href="events.html">Events</a>
+                        </li>
+                        <li>
+                            <a href="projects.html">Projects</a>
+                        </li>
+                        <li>
+                            <a href="resources.html">Resources</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="request">
+            <div class="container">
+                <form class="request-form">
+                    <h2>Request Open Source Projects</h2>
+                    <label for="name">Your Name*</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Your Email Address*</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="source">Source Code Link*</label>
+                    <input type="url" id="source" name="source" required>
+                    <label for="description">Description of The Project*</label>
+                    <textarea id="description" name="description" required></textarea>
+                    <label for="contact">Contact Number*</label>
+                    <input type="tel" id="contact" name="contact" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+        <section class="popup">
+            <div class="popup">
+                <h1>Thank You!</h1>
+                <p>Your request has been successfully submitted. We will review the project soon!</p>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-content">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Explore</a>
+                        </li>
+                        <li>
+                            <a href="#">Events</a>
+                        </li>
+                        <li>
+                            <a href="#">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#">Resources</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Github </i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 sourceOcean. All rights reserved.</p>
+            </div>
+        </footer>
+        <script>
+            const form = document.querySelector('form');
+            const popup = document.querySelector('.popup');
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                popup.style.display = 'block';
+                setTimeout(() => {
+                    const h1 = document.querySelector('h1');
+                    h1.parentNode.removeChild(h1);
+                }, 3000);
+            });
+        </script>
+    </body>
+</html>
